@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallEmergency.CallEmergencyPage">
+
+    <LinearLayout
+        android:id="@+id/AppBar"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_back"
+        />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Panggilan Darurat"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/outfit_regular"
+        android:layout_marginLeft="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/btn_back"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/AppBar"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/hospital" />
+
+        <TextView
+            android:id="@+id/iconName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center"
+            android:text="Rumah Sakit"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <!-- Form Message -->
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/bg_gray"
+        android:gravity="top"
+        android:hint="Masukan detail Lokasi Dan Pesan jika ada"
+        android:minHeight="100dp"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/type"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/et_message"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+    <!-- SOS Button -->
+    <Button
+        android:id="@+id/btn_sos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:text="Kirim Pesan Darurat"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
